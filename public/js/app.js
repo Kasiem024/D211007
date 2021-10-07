@@ -8,14 +8,17 @@ req.open('GET', dataURL);
 req.responseType = 'json';
 req.send();
 
-console.log('data received');
+console.log('Data received');
 
 req.onload = () => {
+    const data = req.response;
 
-    document.getElementById('Exercise1').innerHTML;
+    const elementH1 = document.createElement('h1');
+    const elementP = document.createElement('p');
 
-    const list = document.getElementById("list");
+    elementP.textContent = data.intro;
+    elementH1.textContent = data.headline;
 
-    list.innerHTML += `<li><a href="#">Item ${list.children.length + 1}</a></li>`;
-
+    document.getElementById('Exercise1').appendChild(elementH1);
+    document.getElementById('Exercise1').appendChild(elementP);
 };
