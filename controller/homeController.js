@@ -17,11 +17,11 @@ exports.editUpdate = (req, res) => {
     const intro = req.body.tBoxName2;
     const articleImage = req.body.tBoxName3;
 
-    const test = { headline, intro, articleImage };
+    const tempText = { headline, intro, articleImage };
 
-    const testAnka = JSON.stringify(test);
+    const newJsonText = JSON.stringify(tempText);
 
-    fs.writeFile('./public/data/exercise1.json', testAnka, function(err) {
+    fs.writeFile('./public/data/exercise1.json', newJsonText, function(err) {
         if (err) throw err;
         console.log('File is created successfully.');
     });

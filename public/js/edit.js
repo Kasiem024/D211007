@@ -40,7 +40,6 @@ req.onload = () => {
 
     btnUpdate.addEventListener('click', ButtonEventhandler);
 
-
     document.getElementById('Exercise2').appendChild(form);
     document.getElementById('formId').appendChild(tBox1);
     document.getElementById('formId').appendChild(tBox2);
@@ -49,10 +48,5 @@ req.onload = () => {
 };
 
 const ButtonEventhandler = () => {
-    const tBox1 = document.getElementById('tBoxId1');
-    const tBox2 = document.getElementById('tBoxId2');
-    const tBox3 = document.getElementById('tBoxId3');
-    const btnUpdate = document.getElementById('btnUpdateId');
-
     console.log('Button Update pushed');
 }
